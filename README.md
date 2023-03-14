@@ -12,7 +12,7 @@ A simple landing page to collect potential user names, email  addresses, etc.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [How to contribute](#how to contribute)
+- [How to contribute](#how-to-contribute)
 - [Tests](#tests)
 
 ## License
