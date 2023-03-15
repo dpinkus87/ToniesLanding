@@ -15,30 +15,44 @@
   box-sizing: border-box;
   border-radius: 100%;
   position:absolute;
-  right: 35px;
-  bottom: 100px;
-  width: 550px;
-  height: 550px;
+  right: 25px;
+  bottom: 200px;
+  width: 450px;
+  height: 450px;
   padding: 0;
   background: #ffffff;
   border: 5px solid #d9d9d9;
 }
 
-.redhero {
-  position: relative;
-  max-width: auto;
+#redhero {
+  /* position: relative; */
+  display: flex;
+  max-width: 50%;
   min-width: fit-content;
   height: 550px;
   background: #e5282c;
   border: 1px solid #000000;
-  border-radius: 25px;
+  border-radius: 25px, 0px, 0px, 0px;
   box-sizing: border-box;
-  margin-left: 4rem;
   margin-right: 5rem;
   margin-top: 3rem;
   padding-top: 10px;
-  padding-bottom: 5rem;
-}
+  padding-bottom: 1rem;
+} 
+
+#whitehero {
+    width: 50%;
+    height: 550px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 25px, 25px, 0px, 0px;
+    box-sizing: border-box;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    padding-top: 10px;
+    padding-bottom: 5rem;
+  }
+
 
 .herotext {
   position: absolute;
@@ -50,11 +64,46 @@
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  color: #d9d9d9;
+  color: #000000;
 }
 
 
 #card_row {
 flex-wrap: wrap;
 justify-content: center;
+}
+
+.me-auto {
+  align-content: baseline;
+}
+
+form {
+  max-width: 50%;
+  bottom: 0;
+  align-self: flex-end;
+  margin-bottom: 0;
+
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+#howitworks {
+  height: 200px;
+  background-color: #000000;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+@media screen and (min-width: 740) { 
+  .herocircle {
+    box-sizing: border-box;
+    flex-shrink: 5;
+ 
+    right: 25px;
+    bottom: 200px;
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    }
 }
