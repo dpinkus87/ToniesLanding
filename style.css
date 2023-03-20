@@ -32,7 +32,8 @@
   height: 550px;
   background: #e5282c;
   border: 1px solid #000000;
-  border-radius: 25px, 25px, 0px, 0px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
   box-sizing: border-box;
   margin-right: 5rem;
   margin-top: 3rem;
@@ -46,7 +47,8 @@
     height: 550px;
     background: #ffffff;
     border: 1px solid #000000;
-    border-radius: 25px, 25px, 0px, 0px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     box-sizing: border-box;
     margin-left: 3rem;
     margin-top: 3rem;
