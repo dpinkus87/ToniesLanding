@@ -14,14 +14,16 @@
 .herocircle {
   box-sizing: border-box;
   border-radius: 100%;
-  position:absolute;
+  position: relative;
   right: 25px;
-  bottom: 200px;
+  bottom: 180px;
   width: 200px;
   height: 200px;
   padding: 0;
   background: #ffffff;
   border: 5px solid #d9d9d9;
+  float: right;
+
 }
 
 #redhero {
