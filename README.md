@@ -19,7 +19,7 @@ A simple landing page to collect potential user names, email  addresses, etc.
 
 ## Installation
 
-(.Assets/Screen Shot 2023-03-20 at 10.52.49 AM.png)
+(img src="./Assets/Screen Shot 2023-03-20 at 10.52.49 AM.png")
 
 ## Usage
 
