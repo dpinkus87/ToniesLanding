@@ -23,7 +23,11 @@
   background: #ffffff;
   border: 5px solid #d9d9d9;
   float: right;
+}
 
+img {
+  margin-left: 29px;
+  margin-top: 28px;
 }
 
 #redhero {
