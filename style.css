@@ -41,8 +41,13 @@
   margin-top: 3rem;
   padding-top: 10px;
   padding-bottom: 1rem;
- 
-} 
+}
+
+#redhero h1 {
+  color: white;
+  padding-left: 185px;
+  padding-top: 20px;
+}
 
 #whitehero {
     width: 50%;
@@ -87,16 +92,17 @@ text-align:end;
 
 .form-group {
   margin: 0;
+  padding-bottom: 7px;
 }
 
 form {
   max-width: 50%;
   bottom: 0;
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  /* align-items: center; */
   margin-bottom: 0;
   margin-top: 0;
-  padding: 0;
-
+  padding-bottom: 145px;
 }
 
 label {
