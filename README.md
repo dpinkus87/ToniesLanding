@@ -19,7 +19,7 @@ A simple landing page to collect potential user names, email  addresses, etc.
 
 ## Installation
 
-There are no dependencies at this time.
+(.Assets/Screen Shot 2023-03-20 at 10.52.49 AM.png)
 
 ## Usage
 
@@ -29,7 +29,7 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 ## Credits
 
-This project was developed by dpinkus87 for challenge #9. 
+This project was developed by dpinkus87 and BoyWondr84. 
 
 ---
 
