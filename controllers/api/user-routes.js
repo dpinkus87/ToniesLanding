@@ -1,60 +1,87 @@
-const router = require('express').Router();
-const { User, Que } = require('../../models');
+const router = require("express").Router();
+const { User, Que } = require("../../models");
 
 // Create new user
-router.post('/')
+router.post("/signup", async (req, res) => {
+  try {
+    const dbUserData = await User.create({
+      user_name: req.body.user_name,
+      email: req.body.email,
+      password: req.body.password,
+      address: req.body.city,
+      city: req.body.city,
+      zip: req.body.city,
+    });
+
+    await Orders.create({
+      user_id: dbUserData.id,
+    });
+
+    await Collections.create({
+      user_id: dbUserData.id,
+    });
+
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.loggedIn = true;
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // Login - Should the route be /login or the index
 
+router.post("/login", async (req, res) => {
+  try {
+    const dbUserData = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
 
-router.post('/login', async (req, res) => {
-    try {
-      const dbUserData = await User.findOne({
-        where: {
-          email: req.body.email,
-        },
-      });
-  
-      if (!dbUserData) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password. Please try again!' });
-        return;
-      }
-  
-      const validPassword = await dbUserData.checkPassword(req.body.password);
-  
-      if (!validPassword) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password. Please try again!' });
-        return;
-      }
-  
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.loggedIn = true;
-  
-        res
-          .status(200)
-          .json({ user: dbUserData, message: 'You are now logged in!' });
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
+    if (!dbUserData) {
+      res
+        .status(400)
+        .json({ message: "Incorrect email or password. Please try again!" });
+      return;
     }
-  });
 
-  // Logout - SHOULD THE ROUTE BE /logout or the index
-  
-router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
-      req.session.destroy(() => {
-        res.status(204).end();
-      });
-    } else {
-      res.status(404).end();
+    const validPassword = await dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: "Incorrect email or password. Please try again!" });
+      return;
     }
-  });
-  
-  module.exports = router;
+
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.loggedIn = true;
+
+      res
+        .status(200)
+        .json({ user: dbUserData, message: "You are now logged in!" });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Logout - SHOULD THE ROUTE BE /logout or the index
+
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+module.exports = router;

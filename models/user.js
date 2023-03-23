@@ -34,25 +34,21 @@ User.init(
     address: {
         type: DataTypes.STRING,
       },
- city: {
+    city: {
         type: DataTypes.STRING,
       },
     zip: {
       type: DataTypes.INTEGER,
     },
-    bio: {
-      type: DataTypes.STRING,
+   
+  
+    que_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'que',
+        key: 'id',
+      }
     },
-    profile_image: {
-      type: DataTypes.STRING,
-    },
-    // orders_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'orders',
-    //     key: 'id',
-    //   }
-    // },
   },
 
   {
