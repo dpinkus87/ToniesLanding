@@ -4,7 +4,7 @@ const addToQue = async (event) => {
 
     if (event.target.hasAttribute('data-id')) {
         const user_id = document.querySelector('#que-list').getAttribute("data-user-id")
-        const produducts_id = event.target.getAttribute("data-id")
+        const products_id = event.target.getAttribute("data-id")
         const response = await fetch(`/que`, {
             method: 'POST',
             body: JSON.stringify({
