@@ -53,6 +53,14 @@ img {
   padding-top: 20px;
 }
 
+.checkbox {
+  margin: 14px 0 14px 0;
+}
+
+.checkbox label {
+  padding-left: 20px;
+}
+
 #whitehero {
     width: 50%;
     height: 550px;
@@ -96,7 +104,7 @@ text-align:end;
 
 .form-group {
   margin: 0;
-  padding-bottom: 7px;
+  /* padding-bottom: 4px; */
 }
 
 form {
