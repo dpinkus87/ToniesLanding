@@ -3,15 +3,15 @@ const { User, Que, Que_Item, Tonies } = require("../models");
 
 // Render Home Page
 
-router.get("/", async (req, res) => {
-  res.render("home", {
+router.get('/', async (req, res) => {
+  res.render('home', {
     loggedIn: req.session.loggedIn,
   });
 });
 
 // Get a user for profile
 
-router.get("/profile", async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     const queData = await User.findOne({
       where: { id: req.session.user_id },
@@ -19,15 +19,16 @@ router.get("/profile", async (req, res) => {
     const userQue = await Que.findOne({
       where: { id: req.session.user_id },
     });
+
     const userProfile = queData.get({ plain: true });
 
-    const currentQueItemData = await Que.findOne({
+    const currentQueData = await Que.findOne({
       where: {
         id: req.session.user_id,
       },
       include: [{ model: Tonies, through: Que_Item }],
     });
-    const currentQueItem = currentQueItemData.get({ plain: true });
+    const currentQue = currentQueData.get({ plain: true });
 
     req.session.save(() => {
       if (req.session.countVisit) {
@@ -35,10 +36,9 @@ router.get("/profile", async (req, res) => {
       } else {
         req.session.countVisit = 1;
       }
-      res.render("profile", {
+      res.render('profile', {
         userProfile,
-        currentCollection,
-        currentQueItem,
+        currentQue,
         loggedIn: req.session.loggedIn,
         countVisit: req.session.countVisit,
       });
@@ -50,13 +50,13 @@ router.get("/profile", async (req, res) => {
 });
 
 // Get all Tonies
-router.get("/tonies", async (req, res) => {
+router.get('/tonies', async (req, res) => {
   try {
     const tonieData = await Tonies.findAll({});
 
     const tonieList = tonieData.map((tonies) => tonies.get({ plain: true }));
 
-    res.render("tonies", {
+    res.render('tonies', {
       tonieList,
       loggedIn: req.session.loggedIn,
       user_id: req.session.user_id,
@@ -84,7 +84,7 @@ router.get("/tonie/:id", async (req, res) => {
 });
 
 // Get all Tonies in Que_Item by ID
-router.get("/que", async (req, res) => {
+router.get('/que', async (req, res) => {
   try {
     const queData = await Que.findAll({
       where: { user_id: req.session.user_id },
@@ -93,7 +93,7 @@ router.get("/que", async (req, res) => {
 
     const queList = queData.map((que) => que.get({ plain: true }));
 
-    res.render("que", {
+    res.render('que', {
       queList,
       loggedIn: req.session.loggedIn,
     });
@@ -104,7 +104,7 @@ router.get("/que", async (req, res) => {
 });
 
 // Add Tonie to Que
-router.post("/que", async (req, res) => {
+router.post('/que', async (req, res) => {
   try {
     let queData = await Que.findOne({
       where: { user_id: req.session.user_id },
@@ -129,7 +129,7 @@ router.post("/que", async (req, res) => {
 });
 
 // Delete Tonie from Que
-router.delete("/que", async (req, res) => {
+router.delete('/que', async (req, res) => {
   try {
     const queData = await Que_Item.destroy({
       where: {
@@ -149,21 +149,21 @@ router.delete("/que", async (req, res) => {
 });
 
 // Login Route
-router.get("/login", (req, res) => {
+router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect('/');
     return;
   }
   res.render("login");
 });
 
 // Signup Route
-router.get("/signup", (req, res) => {
+router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect('/');
     return;
   }
-  res.render("signup");
+  res.render('signup');
 });
 
 module.exports = router;
