@@ -14,6 +14,7 @@ Categories.init(
         cat_name: {
             type: DataTypes.STRING,
         },
+     
     },
     {
         sequelize,
