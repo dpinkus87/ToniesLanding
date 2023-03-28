@@ -2,10 +2,9 @@ const router = require("express").Router();
 const { User, Que } = require("../../models");
 
 // Create new user
-router.post("/signup", async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      user_name: req.body.user_name,
       email: req.body.email,
       password: req.body.password,
       address: req.body.city,
@@ -13,11 +12,7 @@ router.post("/signup", async (req, res) => {
       zip: req.body.city,
     });
 
-    await Orders.create({
-      user_id: dbUserData.id,
-    });
-
-    await Collections.create({
+    await Que.create({
       user_id: dbUserData.id,
     });
 
@@ -32,9 +27,9 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// Login - Should the route be /login or the index
+// Login - Should the route be /login or the index?
 
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
       where: {
@@ -72,7 +67,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Logout - SHOULD THE ROUTE BE /logout or the index
+// Logout - SHOULD THE ROUTE BE /logout or the index?
 
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {

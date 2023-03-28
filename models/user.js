@@ -40,8 +40,6 @@ User.init(
     zip: {
       type: DataTypes.INTEGER,
     },
-   
-  
     que_id: {
       type: DataTypes.INTEGER,
       references: {
