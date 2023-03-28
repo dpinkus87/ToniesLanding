@@ -25,13 +25,6 @@ Tonies.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        categories_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'categories',
-                key: 'id'
-            }
-        },
     
     },
 

@@ -2,6 +2,7 @@ const User = require('./user');
 const Que = require('./que');
 const Que_Item = require('./que_item');
 const Tonies = require('./tonies');
+const Categories = require('./categories')
 
 
 // Relationships
@@ -23,5 +24,13 @@ Tonies.belongsToMany(Que, {
     through: Que_Item,
     foreignKey: 'que_id',
 });
+
+Categories.belongsToMany(Tonies, {
+    through: 'ToniesCategories',
+})
+
+Tonies.belongsToMany(Categories, {
+    through: 'ToniesCategories',
+})
 
 module.exports = { User, Que, Que_Item, Tonies};
