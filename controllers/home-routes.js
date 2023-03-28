@@ -16,9 +16,7 @@ router.get('/profile', async (req, res) => {
     const queData = await User.findOne({
       where: { id: req.session.user_id },
     });
-    const userQue = await Que.findOne({
-      where: { id: req.session.user_id },
-    });
+  
 
     const userProfile = queData.get({ plain: true });
 
@@ -49,7 +47,7 @@ router.get('/profile', async (req, res) => {
   }
 });
 
-// Get all Tonies
+// Get all Tonies for marketplace
 router.get('/tonies', async (req, res) => {
   try {
     const tonieData = await Tonies.findAll({});
@@ -67,7 +65,7 @@ router.get('/tonies', async (req, res) => {
   }
 });
 
-// Get Tonie by ID
+// Get a single Tonie by ID
 router.get("/tonie/:id", async (req, res) => {
   try {
     const tonieData = await Tonies.findByPk(req.params.id);
@@ -103,7 +101,7 @@ router.get('/que', async (req, res) => {
   }
 });
 
-// Add Tonie to Que
+// Add Tonie to a user's Que
 router.post('/que', async (req, res) => {
   try {
     let queData = await Que.findOne({
@@ -128,7 +126,7 @@ router.post('/que', async (req, res) => {
   }
 });
 
-// Delete Tonie from Que
+// Delete a Tonie from a user's Que
 router.delete('/que', async (req, res) => {
   try {
     const queData = await Que_Item.destroy({

@@ -1,5 +1,5 @@
 {
-  "name": "Ben's Friends",
+  "name": "tonies",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,12 +16,13 @@
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^5.3.5",
     "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
-    "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.30.0",
     "serve": "^14.1.2"
   },
   "devDependencies": {
