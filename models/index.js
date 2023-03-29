@@ -9,10 +9,12 @@ const Categories = require('./categories')
 
 User.hasOne(Que, {
     foreignKey: 'user_id',
+    constraints: false
 });
 
 Que.belongsTo(User, {
     foreignKey: 'user_id',
+    constraints: false
 });
 
 Que.belongsToMany(Tonies, {
@@ -33,4 +35,4 @@ Tonies.belongsToMany(Categories, {
     through: 'ToniesCategories',
 })
 
-module.exports = { User, Que, Que_Item, Tonies};
+module.exports = { User, Que, Que_Item, Tonies, Categories};

@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
 
-const seedTonies = require('./toniesData')
-const seedCategories = require('./categoriesData')
-const seedUsers = required('./userData.js')
+const seedTonies = require('./toniesData');
+const seedCategories = require('./categoriesData');
+const seedUsers = require('./userData.js');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true});
