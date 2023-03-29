@@ -11,7 +11,7 @@ const signupFormHandler = async (event) => {
   const zip = document.querySelector('#zip-signup').value.trim();
 
 
-  if (first_name && && last_name && email && password && address && city && zip) {
+  if (first_name && last_name && email && password && address && city && zip) {
     const response = await fetch('/api/users/signup', {
       method: 'POST',
       body: JSON.stringify({ user_name, email, password, address, city, zip}),
