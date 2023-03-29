@@ -18,9 +18,9 @@ Tonies.init(
         prod_description: {
             type: DataTypes.STRING,
         },
-        status: {
-            type: DataTypes.BOOLEAN,
-        },
+        // status: {
+        //     type: DataTypes.BOOLEAN,
+        // },
         filename: {
             type: DataTypes.STRING,
             allowNull: false,
