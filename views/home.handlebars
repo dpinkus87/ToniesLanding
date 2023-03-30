@@ -18,7 +18,15 @@
         <div>
           <h1>Sign up NOW!</h1>
         </div>
-          <form action="/action_page.php">
+        <center>
+           {{#if loggedIn}}
+    {{else}}
+    <div class="line">
+        <a href="/login">Login</a> 
+    </div>
+    {{/if}}
+        </center>
+          <form action="action_page.php">
             <div class="form-group">
               <label for="FirstName"></label>
               <input type="text" class="form-control" id="firstName" placeholder="First Name" />
@@ -61,7 +69,7 @@
     <!-- Hero Circle -->
     <div class="col">
       <div class="herocircle">
-        <img src="./Assets/TB_pic.png" height="132px" width="132px"/>
+        <img src="/images_Moana.jpg" height="132px" width="132px"/>
       </div>
     </div>
 
@@ -205,6 +213,8 @@
       </ul>
     </footer>
   </div>
+</center>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
@@ -217,5 +227,3 @@
     </script>
 
     <script src="../public/js/signup.js"></script>
-
-</center>
