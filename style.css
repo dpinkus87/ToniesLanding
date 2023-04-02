@@ -25,9 +25,12 @@
 }
 
 .herocircle img {
-  height: 720px;
-  width: 1062px;
-  margin-top: 190px;
+  height: 660px;
+  width: 1000px;
+  margin-top: 170px;
+  padding-left: 20px;
+  border-top-left-radius: 225px;
+  border-top-right-radius: 225px;
 }
 
 #redhero {}
@@ -63,7 +66,7 @@
 
 .herotext {
   position: absolute;
-  padding-left: 30%;
+  padding-left: 33%;
   padding-top: 55px;
   font-family: "Poppins";
   font-style: normal;
@@ -73,14 +76,22 @@
 }
 
 .herotext-emphasized {
-  padding-top: 92px;
-  padding-left: 47%;
+  padding-top: 91px;
+  padding-left: 50%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
   color: rgb(165, 6, 6);
   text-decoration: underline;
+}
+
+.card-spot {
+  position: absolute;
+  top: 410px;
+  width: 100%;
+  background-color: white;
+  padding-top: 20px;
 }
 
 #custom-cards {
