@@ -89,6 +89,18 @@ img {
   color: #000000;
 }
 
+.herotext-emphasized {
+  padding-left: 380px;
+  padding-top: 11px;
+  height: 139px;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 28px;
+  color: rgb(165, 6, 6);
+  text-decoration: underline;
+}
+
 
 #custom-cards {
 flex-wrap: wrap;
