@@ -1,5 +1,3 @@
-
-
 .HeaderText {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -12,7 +10,8 @@
 }
 
 .herocircle {
-  box-sizing: border-box;
+  position: absolute;
+  /* box-sizing: border-box;
   border-radius: 100%;
   position: relative;
   right: 25px;
@@ -22,30 +21,19 @@
   padding: 0;
   background: #ffffff;
   border: 5px solid #d9d9d9;
-  float: right;
+  float: right; */
 }
 
-img {
-  margin-left: 29px;
-  margin-top: 28px;
+.herocircle img {
+  height: 660px;
+  width: 1000px;
+  margin-top: 170px;
+  padding-left: 20px;
+  border-top-left-radius: 225px;
+  border-top-right-radius: 225px;
 }
 
-#redhero {
-  /* position: relative; */
-  /* display: flex; */
-  max-width: 50%;
-  min-width: fit-content;
-  height: 550px;
-  background: #e5282c;
-  border: 1px solid #000000;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  box-sizing: border-box;
-  margin-right: 5rem;
-  margin-top: 3rem;
-  padding-top: 10px;
-  padding-bottom: 1rem;
-}
+#redhero {}
 
 #redhero h1 {
   color: white;
@@ -62,40 +50,56 @@ img {
 }
 
 #whitehero {
-    width: 50%;
-    height: 550px;
-    background: #ffffff;
-    border: 1px solid #000000;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    box-sizing: border-box;
-    margin-left: 3rem;
+  margin-right: 32%;
+  width: 350px;
+  height: 700px;
+  background: #ffffff;
+  border: 10px solid rgb(66, 137, 225);
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* margin-left: 3rem;
     margin-top: 3rem;
-    padding-top: 10px;
-    padding-bottom: 5rem;
-  }
+    padding-top: 7px;
+    padding-bottom: 5rem; */
+}
 
 
 .herotext {
   position: absolute;
-  width: auto;
-  height: 139px;
-  left: 20px;
-  top: 25px;
+  padding-left: 33%;
+  padding-top: 55px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
   color: #000000;
 }
 
+.herotext-emphasized {
+  padding-top: 91px;
+  padding-left: 50%;
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(165, 6, 6);
+  text-decoration: underline;
+}
+
+.card-spot {
+  position: absolute;
+  top: 410px;
+  width: 100%;
+  background-color: white;
+  padding-top: 20px;
+}
 
 #custom-cards {
-flex-wrap: wrap;
-justify-content: center;
-border-radius: 10px;
-height: 470px;
-text-align:end;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 10px;
+  height: 470px;
+  text-align: end;
 }
 
 .me-auto {
@@ -127,19 +131,20 @@ label {
   height: 400px;
   background-color: #e5282c;
   width: auto;
-  margin-right: 3rem; 
+  margin-right: 3rem;
   margin-left: 3rem;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 740) { 
+
+@media screen and (min-width: 740) {
   .herocircle {
     box-sizing: border-box;
     flex-shrink: 5;
- 
+
     right: 25px;
     bottom: 200px;
     width: 150px;
     height: 150px;
     padding: 0;
-    }
+  }
 }
