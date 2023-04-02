@@ -11,17 +11,6 @@
 
 .herocircle {
   position: absolute;
-  /* box-sizing: border-box;
-  border-radius: 100%;
-  position: relative;
-  right: 25px;
-  bottom: 180px;
-  width: 200px;
-  height: 200px;
-  padding: 0;
-  background: #ffffff;
-  border: 5px solid #d9d9d9;
-  float: right; */
 }
 
 .herocircle img {
@@ -102,9 +91,9 @@
   text-align: end;
 }
 
-.me-auto {
+/* .me-auto {
   align-content: baseline;
-}
+} */
 
 .form-group {
   margin: 0;
@@ -127,13 +116,14 @@ label {
   margin-top: 0;
 }
 
-#howitworks {
-  height: 400px;
+#howitworks p {
+  margin-top: 200px;
+  /* height: 400px;
   background-color: #e5282c;
   width: auto;
   margin-right: 3rem;
   margin-left: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; */
 }
 
 @media screen and (min-width: 740) {
