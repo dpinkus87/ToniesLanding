@@ -10,7 +10,8 @@
 }
 
 .herocircle {
-  box-sizing: border-box;
+  position: absolute;
+  /* box-sizing: border-box;
   border-radius: 100%;
   position: relative;
   right: 25px;
@@ -20,12 +21,13 @@
   padding: 0;
   background: #ffffff;
   border: 5px solid #d9d9d9;
-  float: right;
+  float: right; */
 }
 
-img {
-  margin-left: 29px;
-  margin-top: 28px;
+.herocircle img {
+  height: 720px;
+  width: 1062px;
+  margin-top: 190px;
 }
 
 #redhero {}
@@ -45,10 +47,9 @@ img {
 }
 
 #whitehero {
-
   margin-right: 32%;
   width: 350px;
-  height: 650px;
+  height: 700px;
   background: #ffffff;
   border: 10px solid rgb(66, 137, 225);
   border-radius: 50%;
@@ -81,7 +82,6 @@ img {
   color: rgb(165, 6, 6);
   text-decoration: underline;
 }
-
 
 #custom-cards {
   flex-wrap: wrap;
