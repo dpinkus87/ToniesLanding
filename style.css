@@ -22,21 +22,21 @@
   border-top-right-radius: 225px;
 }
 
-#redhero {}
+/* #redhero {}
 
 #redhero h1 {
   color: white;
   padding-left: 185px;
   padding-top: 20px;
-}
+} */
 
-.checkbox {
+/* .checkbox {
   margin: 14px 0 14px 0;
 }
 
 .checkbox label {
   padding-left: 20px;
-}
+} */
 
 #whitehero {
   margin-right: 32%;
@@ -120,8 +120,12 @@ label {
   margin-top: 0;
 }
 
+#howitworks {
+  background-color: red;
+  height: 300px;
+}
 #howitworks p {
-  margin-top: 200px;
+  margin-top: 170px;
   /* height: 400px;
   background-color: #e5282c;
   width: auto;
@@ -134,7 +138,6 @@ label {
   .herocircle {
     box-sizing: border-box;
     flex-shrink: 5;
-
     right: 25px;
     bottom: 200px;
     width: 150px;
