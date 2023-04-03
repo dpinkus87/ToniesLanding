@@ -5,16 +5,18 @@ const { User, Que } = require("../../models");
 router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
       email: req.body.email,
       password: req.body.password,
-      address: req.body.city,
+      address: req.body.address,
       city: req.body.city,
-      zip: req.body.city,
+      zip: req.body.zip,
     });
 
-    await Que.create({
-      user_id: dbUserData.id,
-    });
+    // await Que.create({
+    //   user_id: dbUserData.id,
+    // });
 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
