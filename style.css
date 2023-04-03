@@ -1,9 +1,9 @@
 .HeaderText {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 45px;
+  font-size: 49px;
   line-height: 60px;
-  color: #000000;
+  color: rgb(165, 6, 6);
   padding-top: 2rem;
   padding-left: 4rem;
   padding-bottom: 0rem;
@@ -22,21 +22,21 @@
   border-top-right-radius: 225px;
 }
 
-#redhero {}
+/* #redhero {}
 
 #redhero h1 {
   color: white;
   padding-left: 185px;
   padding-top: 20px;
-}
+} */
 
-.checkbox {
+/* .checkbox {
   margin: 14px 0 14px 0;
 }
 
 .checkbox label {
   padding-left: 20px;
-}
+} */
 
 #whitehero {
   margin-right: 32%;
@@ -87,8 +87,13 @@
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 10px;
-  height: 470px;
+  height: 382px;
   text-align: end;
+  box-shadow: 4px 6px;
+}
+
+#custom-cards img {
+  border-radius: 10px;
 }
 
 /* .me-auto {
@@ -116,21 +121,65 @@ label {
   margin-top: 0;
 }
 
-#howitworks p {
-  margin-top: 200px;
-  /* height: 400px;
-  background-color: #e5282c;
-  width: auto;
-  margin-right: 3rem;
-  margin-left: 3rem;
-  margin-bottom: 3rem; */
+#howitworks {
+  /* background-color: red; */
+  height: 300px;
+}
+
+#howitworks h2 {
+  margin-top: 140px;
+  margin-bottom: 22px;
+  text-align: center;
+  word-spacing: 9px;
+}
+
+#member-basic {
+  border: 1px solid black;
+  border-radius: 15px;
+  float: left;
+  height: 240px;
+  width: 400px;
+  margin-left: 20%;
+  background-color: rgb(252, 250, 133);
+}
+
+#member-basic h3 {
+  text-align: center;
+}
+
+#member-basic button {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#member-basic li {
+  margin-left: 4%;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+#member-premium {
+  border: 1px solid black;
+  border-radius: 15px;
+  float: right;
+  height: 240px;
+  width: 400px;
+  margin-right: 20%;
+  background-color: rgb(144, 207, 247);
+}
+
+#member-premium h3 {
+  text-align: center;
 }
 
 @media screen and (min-width: 740) {
   .herocircle {
     box-sizing: border-box;
     flex-shrink: 5;
-
     right: 25px;
     bottom: 200px;
     width: 150px;
