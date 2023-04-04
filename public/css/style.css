@@ -21,13 +21,13 @@
   font-size: 49px;
   line-height: 60px;
   padding-top: 2rem;
-  padding-right: 4rem;
+  padding-right: 3rem;
   float: right;
 }
 
 #bluecircle {
   /* margin-right: 32%; */
-  width: 1300px;
+  /* width: 1000px; */
   height: 700px;
   border: 25px solid rgb(66, 137, 225);
   border-radius: 50%;
@@ -97,12 +97,15 @@
 }
 
 #signup-form p {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .form-group input {
-  margin-bottom: 0px;
-  margin-top: 0;
+  width: 100%;
+}
+
+.form button {
   width: 100%;
 }
 
@@ -114,7 +117,7 @@
 /* Toni cards */
 .card-spot {
   position: absolute;
-  top: 480px;
+  top: 510px;
   width: 100%;
   background-color: white;
   /* padding-top: 20px; */
