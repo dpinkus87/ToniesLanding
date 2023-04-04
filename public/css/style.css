@@ -1,5 +1,9 @@
 /* https://www.figma.com/file/Yj1NHCSrwC5zT1LCncVyXr/Tonies?node-id=103%3A2&t=cRnv1VjcPhezKqmj-1 */
 
+/* Header */
+.header {
+  height: 100px;
+}
 .HeaderText {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -8,33 +12,69 @@
   color: rgb(165, 6, 6);
   padding-top: 2rem;
   padding-left: 4rem;
-  padding-bottom: 0rem;
+  float: left;
 }
 
+.SignupText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 60px;
+  padding-top: 2rem;
+  padding-right: 4rem;
+  float: right;
+}
+
+#bluecircle {
+  /* margin-right: 32%; */
+  width: 1300px;
+  height: 700px;
+  border: 25px solid rgb(66, 137, 225);
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* margin-left: 3rem;
+    margin-top: 3rem;
+    padding-top: 7px;
+    padding-bottom: 5rem; */
+}
+
+/* Toni box image */
 .herocircle {
   position: absolute;
-  width: 1300px;
-  height: 1300px;
+  /* width: 1300px; */
+  /* height: 1300px; */
 }
 
+.herocircle img {
+  height: 650px;
+  width: 100%;
+  margin-top: 170px;
+  padding-left: 220px;
+  /* border-top-left-radius: 185px;
+  border-top-right-radius: 225px; */
+}
+
+/* Sign-up Container & Form */
+
 #signup-form-container {
-  background: #E42E30 !;
-  height: 400px !;
+  background: #E42E30;
+  height: 400px;
 }
 
 #signup-form {
   height: 400px !;
   width: 340px !;
-  background: #E42E30 border-radius: 15px;
+  /* background: #E42E30 border-radius: 15px; */
 }
 
-.herocircle img {
-  height: 1300px;
-  width: 1300px;
-  margin-top: 170px;
-  padding-left: 20px;
-  border-top-left-radius: 225px;
-  border-top-right-radius: 225px;
+#signup-form p {
+  font-size: 15px;
+}
+
+.form-group input {
+  margin-bottom: 0px;
+  margin-top: 0;
+  width: 100%;
 }
 
 /* .checkbox {
@@ -48,20 +88,6 @@
   width: 100%;
   height: 500px;
 }
-
-#bluecircle {
-  /* margin-right: 32%; */
-  width: 1300px;
-  height: 1800px;
-  border: 25px solid rgb(66, 137, 225);
-  border-radius: 50%;
-  box-sizing: border-box;
-  /* margin-left: 3rem;
-    margin-top: 3rem;
-    padding-top: 7px;
-    padding-bottom: 5rem; */
-}
-
 
 .herotext {
   position: absolute;
@@ -86,11 +112,11 @@
 }
 
 .card-spot {
-  /* position: absolute; */
-  top: 410px;
+  position: absolute;
+  top: 480px;
   width: 100%;
   background-color: white;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 #custom-cards {
@@ -109,27 +135,6 @@
 /* .me-auto {
   align-content: baseline;
 } */
-
-.form-group {
-  margin: 0;
-  /* padding-bottom: 4px; */
-}
-
-form {
-  max-width: 50%;
-  bottom: 0;
-  /* align-self: flex-end; */
-  /* align-items: center; */
-  /* margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 145px; */
-  padding-top: 70px;
-}
-
-label {
-  margin-bottom: 0px;
-  margin-top: 0;
-}
 
 #howitworks {
   background-color: white;
