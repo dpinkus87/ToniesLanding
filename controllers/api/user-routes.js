@@ -31,9 +31,9 @@ router.post('/signup', async (req, res) => {
 
 // Get users
 
-router.get('/user', async (req, res) => {
-  try 
-})
+// router.get('/user', async (req, res) => {
+//   try 
+// })
 
 // Login - Should the route be /login or the index?
 
