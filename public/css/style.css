@@ -110,6 +110,12 @@
 }
 
 /* Toni cards */
+#carouselTonieCards {
+  top: 610px;
+  position: absolute;
+  margin-left: 25%;
+}
+
 .card-spot {
   position: absolute;
   top: 610px;
