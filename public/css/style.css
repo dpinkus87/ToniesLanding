@@ -87,7 +87,7 @@
 
 #signup-form-container {
   background: #E42E30;
-  height: 400px;
+  height: 450px;
 }
 
 #signup-form {
@@ -117,7 +117,7 @@
 /* Toni cards */
 .card-spot {
   position: absolute;
-  top: 510px;
+  top: 610px;
   width: 100%;
   background-color: white;
   /* padding-top: 20px; */
