@@ -86,10 +86,17 @@
 /* Sign-up Container & Form */
 
 #signup-form-container {
+  position: absolute;
+  margin-left: 70%;
+  z-index: 1;
   background: #E42E30;
   height: 450px;
 }
 
+#container-fluid {
+position: relative;
+z-index: 3;
+}
 /* #signup-form {
   height: 400px !;
   width: 340px !; */
