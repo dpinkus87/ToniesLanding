@@ -27,8 +27,7 @@
 
 #bluecircle {
   /* margin-right: 32%; */
-  /* width: 1000px; */
-  height: 700px;
+  width: 100%;
   border: 25px solid rgb(66, 137, 225);
   border-radius: 50%;
   box-sizing: border-box;
@@ -36,6 +35,15 @@
     margin-top: 3rem;
     padding-top: 7px;
     padding-bottom: 5rem; */
+}
+.circle-row {
+  height: 800px;
+}
+
+#bluecircle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 /* Toni box image */
