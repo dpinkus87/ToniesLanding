@@ -28,7 +28,7 @@
 #bluecircle {
   /* margin-right: 32%; */
   width: 100%;
-  border: 25px solid rgb(66, 137, 225);
+  border: 28px solid rgb(66, 137, 225);
   border-radius: 50%;
   box-sizing: border-box;
   /* margin-left: 3rem;
@@ -98,7 +98,8 @@
   margin-left: 70%;
   z-index: 1;
   background: #E42E30;
-  height: 450px;
+  height: 475px;
+  border-radius: 15px;
 }
 
 #container-fluid {
@@ -112,8 +113,19 @@ z-index: 3;
 /* } */
 
 #signup-form p {
-  font-size: 16px;
+  font-size: 12 px;
+  color: #ffffff;
+text-align: center;}
+
+#signup-form h1 {
+  font-size: 18px;
   font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+#signup-form label {
+  color: #ffffff;
 }
 
 .form-group input {
@@ -122,6 +134,7 @@ z-index: 3;
 
 .form button {
   margin-top: 5px;
+  align-content: center;
 }
 
 /* Toni cards */
