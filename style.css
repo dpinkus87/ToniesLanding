@@ -11,6 +11,7 @@
 
 .herocircle {
   position: absolute;
+  
 }
 
 .herocircle img {
@@ -20,6 +21,8 @@
   padding-left: 20px;
   border-top-left-radius: 225px;
   border-top-right-radius: 225px;
+
+
 }
 
 /* #redhero {}
